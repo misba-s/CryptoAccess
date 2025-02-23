@@ -19,7 +19,7 @@ import UserSidebar from "./Authentication/UserSidebar";
 const useStyles = makeStyles((theme) => ({
   title: {
     flex: 1,
-    color: "gold",
+    color: "#FFFFFF",
     fontFamily: "Montserrat",
     fontWeight: "bold",
     cursor: "pointer",
@@ -46,6 +46,13 @@ function Header() {
       <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
+          <img
+              src="/brainwave-symbol.svg" // Update the correct path
+              alt="CryptoAccess Logo"
+              width="40" // Adjust size as needed
+              height="40"
+              style={{ marginRight: 10 }}
+            />
             <Typography
               onClick={() => history.push(`/`)}
               variant="h6"
