@@ -47,9 +47,9 @@ function Header() {
         <Container>
           <Toolbar>
           <img
-              src="/brainwave-symbol.svg" // Update the correct path
+              src="/brainwave-symbol.svg" 
               alt="CryptoAccess Logo"
-              width="40" // Adjust size as needed
+              width="40" 
               height="40"
               style={{ marginRight: 10 }}
             />

@@ -2,7 +2,7 @@ import { Box, Button, TextField } from "@material-ui/core";
 import React from "react";
 import { useState } from "react";
 import { CryptoState } from "../../CryptoContext";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 
 
@@ -31,6 +31,7 @@ const Signup = ({ handleClose }) => {
                 email,
                 password
                 );
+                await signOut(auth);
 
                 console.log(result);
 

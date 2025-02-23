@@ -7,7 +7,7 @@ import { AppBar, Button, Tabs, Tab, Box } from '@material-ui/core';
 import Login from './Login';
 import Signup from './Signup';
 import GoogleButton from 'react-google-button';
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'; // ✅ Fixed import
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'; 
 import { auth } from '../../firebase';
 import { CryptoState } from '../../CryptoContext';
 
@@ -46,6 +46,9 @@ export default function AuthModal() {
 
   const signInWithGoogle = async () => {
     try {
+      googleProvider.setCustomParameters({
+        prompt: "select_account", 
+      });
       const result = await signInWithPopup(auth, googleProvider);
       setAlert({
         open: true,
